@@ -21,11 +21,12 @@
 ```json
 {
   "_id": "user_id",
-  "username": "your_username",
+  "username": "puja",
   "token": "jwt_token"
 }
 ```
 - Possible Error
+  
 `
 400 Bad Request — Missing fields or user already exists.
 `
@@ -49,6 +50,7 @@
 ```
 
 - Possible Error
+  
 `
 401 Unauthorized — Invalid username or password.
 `
@@ -77,6 +79,7 @@
 }
 ```
 - Possible Error
+  
 `
 400 Bad Request — Missing required fields.
 `
@@ -100,6 +103,7 @@
 
 ```
 - Possible Error
+
 `
 400 Bad Request — Quantity not provided.
 `
