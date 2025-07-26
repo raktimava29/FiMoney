@@ -136,8 +136,13 @@
 ```bash
 git clone https://github.com/raktimava29/FiMoney.git
 npm install
-cd back-end
 npm start
+```
+Another Terminal
+```bash
+cd front-end
+npm install
+npm run dev
 ```
 #### ENV File
 ```

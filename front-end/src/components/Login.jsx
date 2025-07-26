@@ -35,7 +35,7 @@ const Login = () => {
         navigateTo("/home");
     }
     catch (err) {
-      console.error("Signup Error:", err?.response?.data || err.message);
+      console.error("Login Error:", err?.response?.data || err.message);
       alert(err?.response?.data?.message || "Login failed. Please try again.");
     }
   }
