@@ -36,7 +36,7 @@ const Login = () => {
     }
     catch (err) {
       console.error("Signup Error:", err?.response?.data || err.message);
-      alert(err?.response?.data?.message || "Signup failed. Please try again.");
+      alert(err?.response?.data?.message || "Login failed. Please try again.");
     }
   }
 
