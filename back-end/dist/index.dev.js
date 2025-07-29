@@ -26,6 +26,6 @@ app.get("/", function (req, res) {
 app.use(notFound);
 app.use(errorHandler);
 var PORT = process.env.PORT || 5000;
-app.listen(PORT, function () {
+app.listen(PORT, '0.0.0.0', function () {
   return console.log("Server Started on PORT ".concat(PORT));
 });
