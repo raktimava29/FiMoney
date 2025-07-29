@@ -10,6 +10,9 @@ COPY package*.json ./
 # Install dependencies from root
 RUN npm install
 
+# 🔧 Fix permission for nodemon
+RUN chmod +x ./node_modules/.bin/nodemon
+
 # Copy rest of the project (including back-end folder)
 COPY . .
 
