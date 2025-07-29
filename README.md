@@ -13,7 +13,6 @@ git clone https://github.com/raktimava29/FiMoney.git
 cd FiMoney
 docker build -t fimoney .
 docker run -p 5000:5000 fimoney
-
 ```
 
 ## User Authentication
