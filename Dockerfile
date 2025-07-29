@@ -1,17 +1,18 @@
-# Use official Node.js image
-FROM node:18
+# Set base image
+FROM node:22
 
 # Set working directory
 WORKDIR /app
 
-# Copy only package.json and package-lock.json first
+# Copy package files first for caching
 COPY back-end/package*.json ./back-end/
 
-# Install backend dependencies
-RUN cd back-end && npm install
+# Change WORKDIR to back-end, THEN run npm install
+WORKDIR /app/back-end
+RUN npm install
 
-# Copy the rest of the code
-COPY . .
+# Now copy the rest of the backend code
+COPY back-end/ /app/back-end/
 
 # Set environment variable for port (can be overridden at runtime)
 ENV PORT=5000
@@ -20,4 +21,4 @@ ENV PORT=5000
 EXPOSE $PORT
 
 # Start the backend server
-CMD ["npm", "start", "--prefix", "back-end"]
+CMD ["npm", "start"]
