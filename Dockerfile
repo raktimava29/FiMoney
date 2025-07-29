@@ -20,4 +20,4 @@ ENV PORT=5000
 EXPOSE $PORT
 
 # Start the backend server from back-end/index.js
-CMD ["nodemon", "back-end/index.js"]
+CMD ["npx", "nodemon", "back-end/index.js"]
