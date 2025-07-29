@@ -4,14 +4,14 @@ FROM node:22
 # Set working directory
 WORKDIR /app
 
-# Copy backend files
-COPY back-end/ ./back-end/
+# Copy the root-level package.json and package-lock.json
+COPY package*.json ./
 
-# Set working directory to back-end
-WORKDIR /app/back-end
-
-# Install dependencies
+# Install dependencies from root
 RUN npm install
+
+# Copy rest of the project (including back-end folder)
+COPY . .
 
 # Set environment variable
 ENV PORT=5000
@@ -19,5 +19,5 @@ ENV PORT=5000
 # Expose the port
 EXPOSE $PORT
 
-# Start the backend server
-CMD ["npm", "start"]
+# Start the backend server from back-end/index.js
+CMD ["nodemon", "back-end/index.js"]
