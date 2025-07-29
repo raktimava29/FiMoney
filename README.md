@@ -6,6 +6,16 @@
 
 - Models, Routers and Controllers.
 
+## Run with Docker
+
+```
+git clone https://github.com/raktimava29/FiMoney.git
+cd FiMoney
+docker build -t fimoney .
+docker run -p 5000:5000 fimoney
+
+```
+
 ## User Authentication
 
 ####   POST `/api/user/register`
@@ -26,7 +36,6 @@
 }
 ```
 - Possible Error
-  
 `
 400 Bad Request — Missing fields or user already exists.
 `
@@ -50,7 +59,6 @@
 ```
 
 - Possible Error
-  
 `
 401 Unauthorized — Invalid username or password.
 `
@@ -79,7 +87,6 @@
 }
 ```
 - Possible Error
-  
 `
 400 Bad Request — Missing required fields.
 `
@@ -103,7 +110,6 @@
 
 ```
 - Possible Error
-
 `
 400 Bad Request — Quantity not provided.
 `
@@ -136,13 +142,8 @@
 ```bash
 git clone https://github.com/raktimava29/FiMoney.git
 npm install
+cd back-end
 npm start
-```
-Another Terminal
-```bash
-cd front-end
-npm install
-npm run dev
 ```
 #### ENV File
 ```
