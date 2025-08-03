@@ -7,6 +7,6 @@ var _require = require("../controllers/userController"),
     logUser = _require.logUser;
 
 var router = express.Router();
-router.route("/register").post(registerUser);
+router.post("/register", registerUser);
 router.post("/login", logUser);
 module.exports = router;
