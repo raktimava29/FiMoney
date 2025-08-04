@@ -3,16 +3,16 @@ const bcrypt = require('bcryptjs');
 
 const userSchema = mongoose.Schema({
   username:{
-    type:'string',
-    required:'true'
+      type: String,
+      required: true,
   },
   password:{
-    type:'string',
-    required:'true'
+      type: String,
+      required: true,
   }
 },
 {
-  timestamps:'true'
+  timestamps: true
 })
 
 userSchema.pre("save", async function (next) {
